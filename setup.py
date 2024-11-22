@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="obsidian_pythomation",
+    name="pykx",
     version="1.0.0",
     packages=find_packages(),
     py_modules=["cli"],
@@ -11,9 +11,9 @@ setup(
             "pykx=cli:main",
         ],
     },
-    author="Palazz",
+    author="palazz",
     description="A collection of Python tools to simplify my obsidian workflows.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    # url="https://github.com/yourusername/my_toolbox",
+    url="https://github.com/MatteoPalazzolo/tool-pykx.git",
 )

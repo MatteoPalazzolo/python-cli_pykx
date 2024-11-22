@@ -1,4 +1,4 @@
-# My Toolbox CLI
+# Pykx
 
 A command-line interface (CLI) for accessing a collection of Python tools.
 
@@ -6,3 +6,4 @@ A command-line interface (CLI) for accessing a collection of Python tools.
 
 ```bash
 pip install .
+```
