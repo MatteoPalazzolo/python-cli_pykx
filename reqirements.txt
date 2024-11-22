@@ -1,0 +1,4 @@
+argparse==1.4.0
+pypercli==1.9.0
+request==2.32.3
+pillow==11.0.0
