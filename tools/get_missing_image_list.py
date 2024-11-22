@@ -1,10 +1,11 @@
 ### mimg
 import glob, os, yaml
 from collections import defaultdict
+import importlib.resources
+from .CONFIG import config
 
-
-def ph_img() -> str:
-    ANALYSIS_PATH = _get_analysis_path_from_config()
+def ph_img(args) -> str:
+    ANALYSIS_PATH = config["analysis_path"] #_get_analysis_path_from_config()
 
     # lista dei percorsi delle cartelle Anime, Film, Videogiochi...
     media_types: list[str] = [os.path.basename(e) for e in glob.glob(ANALYSIS_PATH + "*")if os.path.isdir(e)]
@@ -23,7 +24,7 @@ def ph_img() -> str:
     return content
 
 def _get_analysis_path_from_config() -> str:
-    with open("config.yaml", "r", encoding="UTF-8") as file:
+    with importlib.resources.open_text('pykx', 'config.py') as file:
         config = yaml.safe_load(file)
         analysis_path = config["analysis_path"]
         return analysis_path

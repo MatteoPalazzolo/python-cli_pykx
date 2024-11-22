@@ -1,3 +1,3 @@
-def git_push() -> None:
+def git_push(args) -> None:
     print(git_push)
     return None
